@@ -27,6 +27,8 @@
 		B7CDF47F22466017002A63DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47C22466017002A63DA /* Post.swift */; };
 		B7CDF481224660A0002A63DA /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF480224660A0002A63DA /* Identifier.swift */; };
 		B7CDF48522466190002A63DA /* PostsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF48422466190002A63DA /* PostsLogic.swift */; };
+		B7CDF4872246657E002A63DA /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF4862246657E002A63DA /* PostsViewModel.swift */; };
+		B7CDF48A2246670C002A63DA /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF4892246670C002A63DA /* PostsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		B7CDF47C22466017002A63DA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B7CDF480224660A0002A63DA /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		B7CDF48422466190002A63DA /* PostsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsLogic.swift; sourceTree = "<group>"; };
+		B7CDF4862246657E002A63DA /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		B7CDF4892246670C002A63DA /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +215,7 @@
 			children = (
 				B7CDF48322466182002A63DA /* Logic */,
 				B7CDF48222466175002A63DA /* ViewModel */,
+				B7CDF488224666EA002A63DA /* ViewController */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 		B7CDF48222466175002A63DA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B7CDF4862246657E002A63DA /* PostsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -298,6 +304,14 @@
 				B7CDF48422466190002A63DA /* PostsLogic.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		B7CDF488224666EA002A63DA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7CDF4892246670C002A63DA /* PostsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,8 +525,10 @@
 			files = (
 				B7CDF47522465EB5002A63DA /* PostsWireframe.swift in Sources */,
 				B7CDF47722465F38002A63DA /* AppController.swift in Sources */,
+				B7CDF48A2246670C002A63DA /* PostsViewController.swift in Sources */,
 				B7CDF45F224654B6002A63DA /* GenericState.swift in Sources */,
 				B7CDF46F224656E6002A63DA /* Encodable+JSON.swift in Sources */,
+				B7CDF4872246657E002A63DA /* PostsViewModel.swift in Sources */,
 				B7CDF47F22466017002A63DA /* Post.swift in Sources */,
 				B7CDF46822465651002A63DA /* Networking.swift in Sources */,
 				B7CDF461224654EE002A63DA /* LogicState.swift in Sources */,
