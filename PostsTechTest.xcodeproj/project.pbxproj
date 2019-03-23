@@ -20,6 +20,8 @@
 		B7CDF46C224656A7002A63DA /* URLSession+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF46B224656A7002A63DA /* URLSession+Networking.swift */; };
 		B7CDF46F224656E6002A63DA /* Encodable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF46E224656E6002A63DA /* Encodable+JSON.swift */; };
 		B7CDF4712246581F002A63DA /* NetworkingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF4702246581F002A63DA /* NetworkingSpecs.swift */; };
+		B7CDF47522465EB5002A63DA /* PostsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47422465EB5002A63DA /* PostsWireframe.swift */; };
+		B7CDF47722465F38002A63DA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47622465F38002A63DA /* AppController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		B7CDF46B224656A7002A63DA /* URLSession+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Networking.swift"; sourceTree = "<group>"; };
 		B7CDF46E224656E6002A63DA /* Encodable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+JSON.swift"; sourceTree = "<group>"; };
 		B7CDF4702246581F002A63DA /* NetworkingSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSpecs.swift; sourceTree = "<group>"; };
+		B7CDF47422465EB5002A63DA /* PostsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsWireframe.swift; sourceTree = "<group>"; };
+		B7CDF47622465F38002A63DA /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CDF43122465187002A63DA /* AppDelegate.swift */,
+				B7CDF47622465F38002A63DA /* AppController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CDF45722465439002A63DA /* Main */,
+				B7CDF47422465EB5002A63DA /* PostsWireframe.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -464,6 +470,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7CDF47522465EB5002A63DA /* PostsWireframe.swift in Sources */,
+				B7CDF47722465F38002A63DA /* AppController.swift in Sources */,
 				B7CDF45F224654B6002A63DA /* GenericState.swift in Sources */,
 				B7CDF46F224656E6002A63DA /* Encodable+JSON.swift in Sources */,
 				B7CDF46822465651002A63DA /* Networking.swift in Sources */,
