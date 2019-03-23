@@ -11,6 +11,12 @@ public extension LogicStateType {
         newState[keyPath: keyPath] = value
         return newState
     }
+    
+    func update<T>(keyPath: WritableKeyPath<Self, T>, updatingWith updater: (T) -> T) -> Self {
+        var newState = self
+        newState[keyPath: keyPath] = updater(newState[keyPath: keyPath])
+        return newState
+    }
 }
 
 public typealias LogicStateUpdate<T> = (T) -> T
