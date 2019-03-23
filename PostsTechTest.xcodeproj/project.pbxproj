@@ -25,6 +25,7 @@
 		B7CDF47D22466017002A63DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47A22466017002A63DA /* User.swift */; };
 		B7CDF47E22466017002A63DA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47B22466017002A63DA /* Comment.swift */; };
 		B7CDF47F22466017002A63DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47C22466017002A63DA /* Post.swift */; };
+		B7CDF481224660A0002A63DA /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF480224660A0002A63DA /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		B7CDF47A22466017002A63DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B7CDF47B22466017002A63DA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		B7CDF47C22466017002A63DA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B7CDF480224660A0002A63DA /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +214,7 @@
 		B7CDF45922465470002A63DA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B7CDF480224660A0002A63DA /* Identifier.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				B7CDF43222465187002A63DA /* AppDelegate.swift in Sources */,
 				B7CDF47E22466017002A63DA /* Comment.swift in Sources */,
 				B7CDF46A22465688002A63DA /* Endpoint.swift in Sources */,
+				B7CDF481224660A0002A63DA /* Identifier.swift in Sources */,
 				B7CDF46322465518002A63DA /* GenericDisplay.swift in Sources */,
 				B7CDF46C224656A7002A63DA /* URLSession+Networking.swift in Sources */,
 				B7CDF47D22466017002A63DA /* User.swift in Sources */,
