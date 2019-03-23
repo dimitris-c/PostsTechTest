@@ -22,6 +22,9 @@
 		B7CDF4712246581F002A63DA /* NetworkingSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF4702246581F002A63DA /* NetworkingSpecs.swift */; };
 		B7CDF47522465EB5002A63DA /* PostsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47422465EB5002A63DA /* PostsWireframe.swift */; };
 		B7CDF47722465F38002A63DA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47622465F38002A63DA /* AppController.swift */; };
+		B7CDF47D22466017002A63DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47A22466017002A63DA /* User.swift */; };
+		B7CDF47E22466017002A63DA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47B22466017002A63DA /* Comment.swift */; };
+		B7CDF47F22466017002A63DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF47C22466017002A63DA /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,9 @@
 		B7CDF4702246581F002A63DA /* NetworkingSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSpecs.swift; sourceTree = "<group>"; };
 		B7CDF47422465EB5002A63DA /* PostsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsWireframe.swift; sourceTree = "<group>"; };
 		B7CDF47622465F38002A63DA /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		B7CDF47A22466017002A63DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B7CDF47B22466017002A63DA /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B7CDF47C22466017002A63DA /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +195,7 @@
 		B7CDF45622465428002A63DA /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				B7CDF47922465FF0002A63DA /* Models */,
 				B7CDF45722465439002A63DA /* Main */,
 				B7CDF47422465EB5002A63DA /* PostsWireframe.swift */,
 			);
@@ -259,6 +266,16 @@
 				B7CDF4702246581F002A63DA /* NetworkingSpecs.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		B7CDF47922465FF0002A63DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B7CDF47B22466017002A63DA /* Comment.swift */,
+				B7CDF47C22466017002A63DA /* Post.swift */,
+				B7CDF47A22466017002A63DA /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,12 +491,15 @@
 				B7CDF47722465F38002A63DA /* AppController.swift in Sources */,
 				B7CDF45F224654B6002A63DA /* GenericState.swift in Sources */,
 				B7CDF46F224656E6002A63DA /* Encodable+JSON.swift in Sources */,
+				B7CDF47F22466017002A63DA /* Post.swift in Sources */,
 				B7CDF46822465651002A63DA /* Networking.swift in Sources */,
 				B7CDF461224654EE002A63DA /* LogicState.swift in Sources */,
 				B7CDF43222465187002A63DA /* AppDelegate.swift in Sources */,
+				B7CDF47E22466017002A63DA /* Comment.swift in Sources */,
 				B7CDF46A22465688002A63DA /* Endpoint.swift in Sources */,
 				B7CDF46322465518002A63DA /* GenericDisplay.swift in Sources */,
 				B7CDF46C224656A7002A63DA /* URLSession+Networking.swift in Sources */,
+				B7CDF47D22466017002A63DA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
