@@ -9,7 +9,8 @@ final class PostsWireframe {
     func prepareModule() -> UINavigationController {
         
         let apiClient = PostsNetworkingService(networking: NetworkingClient(), baseURL: APIConfig.staging.baseURL!)
-        let networkingCase = PostsNetworkingUseCase(apiClient: apiClient)
+        let persistance = PostsPersistance(persistance: PersistanceService())
+        let networkingCase = PostsNetworkingUseCase(apiClient: apiClient, persistance: persistance)
         
         let logic = PostsLogic(networkingUseCase: networkingCase)
         let viewModel = PostsViewModel(logic: logic)

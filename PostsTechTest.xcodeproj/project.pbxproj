@@ -34,6 +34,7 @@
 		B7CDF49022466FC5002A63DA /* PostsNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */; };
 		B7CDF49322466FE9002A63DA /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49222466FE9002A63DA /* APIConfig.swift */; };
 		B7CDF49722467920002A63DA /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49622467920002A63DA /* Persistance.swift */; };
+		B7CDF49C22467F28002A63DA /* PostsPesistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkingService.swift; sourceTree = "<group>"; };
 		B7CDF49222466FE9002A63DA /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		B7CDF49622467920002A63DA /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPesistanceService.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -333,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */,
+				B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				B7CDF49722467920002A63DA /* Persistance.swift in Sources */,
 				B7CDF4872246657E002A63DA /* PostsViewModel.swift in Sources */,
 				B7CDF47F22466017002A63DA /* Post.swift in Sources */,
+				B7CDF49C22467F28002A63DA /* PostsPesistanceService.swift in Sources */,
 				B7CDF46822465651002A63DA /* Networking.swift in Sources */,
 				B7CDF461224654EE002A63DA /* LogicState.swift in Sources */,
 				B7CDF43222465187002A63DA /* AppDelegate.swift in Sources */,
