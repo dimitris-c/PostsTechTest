@@ -35,6 +35,10 @@
 		B7CDF49322466FE9002A63DA /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49222466FE9002A63DA /* APIConfig.swift */; };
 		B7CDF49722467920002A63DA /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49622467920002A63DA /* Persistance.swift */; };
 		B7CDF49C22467F28002A63DA /* PostsPesistanceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */; };
+		B7FFD26D224699F100730E23 /* PostDetailsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FFD26C224699F100730E23 /* PostDetailsLogic.swift */; };
+		B7FFD26F224699FE00730E23 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FFD26E224699FE00730E23 /* PostDetailViewModel.swift */; };
+		B7FFD27122469A1700730E23 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FFD27022469A1700730E23 /* PostDetailsViewController.swift */; };
+		B7FFD2732246AE3200730E23 /* PostDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FFD2722246AE3200730E23 /* PostDetailsWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		B7CDF49222466FE9002A63DA /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		B7CDF49622467920002A63DA /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPesistanceService.swift; sourceTree = "<group>"; };
+		B7FFD26C224699F100730E23 /* PostDetailsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsLogic.swift; sourceTree = "<group>"; };
+		B7FFD26E224699FE00730E23 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		B7FFD27022469A1700730E23 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		B7FFD2722246AE3200730E23 /* PostDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsWireframe.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,8 +224,10 @@
 		B7CDF45622465428002A63DA /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				B7FFD26B224699B800730E23 /* Services */,
 				B7CDF47922465FF0002A63DA /* Models */,
 				B7CDF45722465439002A63DA /* Main */,
+				B7FFD2672246978D00730E23 /* Details */,
 				B7CDF47422465EB5002A63DA /* PostsWireframe.swift */,
 			);
 			path = Posts;
@@ -315,7 +325,6 @@
 		B7CDF48322466182002A63DA /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				B7CDF49122466FD1002A63DA /* Services */,
 				B7CDF48D22466F55002A63DA /* PostsNetworkingUseCase.swift */,
 				B7CDF48422466190002A63DA /* PostsLogic.swift */,
 			);
@@ -331,21 +340,56 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		B7CDF49122466FD1002A63DA /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */,
-				B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		B7CDF4952246788E002A63DA /* Persistance */ = {
 			isa = PBXGroup;
 			children = (
 				B7CDF49622467920002A63DA /* Persistance.swift */,
 			);
 			path = Persistance;
+			sourceTree = "<group>";
+		};
+		B7FFD2672246978D00730E23 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				B7FFD2682246979E00730E23 /* Logic */,
+				B7FFD269224697A300730E23 /* ViewModel */,
+				B7FFD26A224697AD00730E23 /* ViewController */,
+				B7FFD2722246AE3200730E23 /* PostDetailsWireframe.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		B7FFD2682246979E00730E23 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				B7FFD26C224699F100730E23 /* PostDetailsLogic.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		B7FFD269224697A300730E23 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B7FFD26E224699FE00730E23 /* PostDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B7FFD26A224697AD00730E23 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B7FFD27022469A1700730E23 /* PostDetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7FFD26B224699B800730E23 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */,
+				B7CDF49B22467F28002A63DA /* PostsPesistanceService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,16 +602,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7CDF47522465EB5002A63DA /* PostsWireframe.swift in Sources */,
+				B7FFD2732246AE3200730E23 /* PostDetailsWireframe.swift in Sources */,
 				B7CDF47722465F38002A63DA /* AppController.swift in Sources */,
 				B7CDF48A2246670C002A63DA /* PostsViewController.swift in Sources */,
+				B7FFD27122469A1700730E23 /* PostDetailsViewController.swift in Sources */,
 				B7CDF45F224654B6002A63DA /* GenericState.swift in Sources */,
 				B7CDF46F224656E6002A63DA /* Encodable+JSON.swift in Sources */,
 				B7CDF49722467920002A63DA /* Persistance.swift in Sources */,
 				B7CDF4872246657E002A63DA /* PostsViewModel.swift in Sources */,
 				B7CDF47F22466017002A63DA /* Post.swift in Sources */,
 				B7CDF49C22467F28002A63DA /* PostsPesistanceService.swift in Sources */,
+				B7FFD26F224699FE00730E23 /* PostDetailViewModel.swift in Sources */,
 				B7CDF46822465651002A63DA /* Networking.swift in Sources */,
 				B7CDF461224654EE002A63DA /* LogicState.swift in Sources */,
+				B7FFD26D224699F100730E23 /* PostDetailsLogic.swift in Sources */,
 				B7CDF43222465187002A63DA /* AppDelegate.swift in Sources */,
 				B7CDF47E22466017002A63DA /* Comment.swift in Sources */,
 				B7CDF46A22465688002A63DA /* Endpoint.swift in Sources */,

@@ -1,6 +1,16 @@
 import UIKit
 
+enum PostsFlowRoute {
+    case postDetails(postId: Identifier<Post>)
+}
+
+protocol PostsFlowNavigable: class {
+    func handle(_ route: PostsFlowRoute)
+}
+
 final class PostsWireframe {
+    
+    private var navigationController: UINavigationController?
     
     init() {
         
@@ -13,9 +23,29 @@ final class PostsWireframe {
         let networkingCase = PostsNetworkingUseCase(apiClient: apiClient, persistance: persistance)
         
         let logic = PostsLogic(networkingUseCase: networkingCase)
-        let viewModel = PostsViewModel(logic: logic)
+        let viewModel = PostsViewModel(logic: logic, navigable: self)
         let viewController = PostsViewController(viewModel: viewModel)
         
-        return UINavigationController(rootViewController: viewController)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.navigationController = navigationController
+        
+        return navigationController
+    }
+    
+    private func showDetail(postId: Identifier<Post>) {
+        guard let navigationController = self.navigationController else { return }
+        let wireframe = PostDetailsWireframe()
+        wireframe.showModule(on: navigationController, postId: postId)
     }
 }
+
+extension PostsWireframe: PostsFlowNavigable {
+    func handle(_ route: PostsFlowRoute) {
+        switch route {
+        case .postDetails(let id):
+            self.showDetail(postId: id)
+            return
+        }
+    }
+}
+

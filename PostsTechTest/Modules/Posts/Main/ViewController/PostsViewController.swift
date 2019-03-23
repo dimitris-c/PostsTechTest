@@ -89,6 +89,12 @@ class PostsViewController: UIViewController {
         items.drive(self.tableView.rx.items(cellIdentifier: PostTableViewCell.identifier, cellType: PostTableViewCell.self)) { row, item, cell in
             cell.configure(item: item)
         }.disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .subscribe(onNext: { [tableView] (indexPath) in
+                tableView.deselectRow(at: indexPath, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
 }

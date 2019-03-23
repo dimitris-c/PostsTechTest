@@ -28,9 +28,11 @@ protocol PostsViewModelType {
 
 final class PostsViewModel: PostsViewModelType {
     private let logic: PostsLogicType
+    private let navigable: PostsFlowNavigable
     
-    init(logic: PostsLogicType) {
+    init(logic: PostsLogicType, navigable: PostsFlowNavigable) {
         self.logic = logic
+        self.navigable = navigable
     }
     
     func connect(_ inputs: Driver<PostsDisplayInput>) -> Driver<GenericDisplay<PostItem>> {
@@ -71,10 +73,14 @@ final class PostsViewModel: PostsViewModelType {
         effects.forEach { (effect) in
             switch effect {
             case .postDetails(let id):
-                print("selected post \(id)")
+                self.navigable.handle(PostsFlowRoute.postDetails(postId: id))
                 break
             }
         }
+    }
+    
+    deinit {
+        print("ASDFADSFADS")
     }
 }
 
