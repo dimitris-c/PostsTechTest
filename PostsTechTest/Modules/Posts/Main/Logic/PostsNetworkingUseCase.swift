@@ -22,6 +22,7 @@ struct PostsNetworkingUseCase {
                     .do(onNext: self.persistance.savePosts)
                     .map(self.stateUpdate)
                     .asDriver(onErrorRecover: self.recoverFromError)
+            default: return .empty()
             }
         })
     }

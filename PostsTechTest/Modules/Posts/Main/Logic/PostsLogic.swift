@@ -4,10 +4,11 @@ import RxCocoa
 
 enum PostsLogicInput {
     case moduleReady
+    case postSelection(id: Identifier<Post>)
 }
 
 enum PostsLogicEffects {
-    case none
+    case postDetails(id: Identifier<Post>)
 }
 
 struct PostsLogicState: LogicStateType {
@@ -35,8 +36,9 @@ final class PostsLogic: PostsLogicType {
         let initial = PostsLogicState(effects: [], state: .loading)
         
         let networkingCase = self.networkingUseCase.handle(input: inputs)
+        let selection = self.handle(inputs)
         
-        let state = networkingCase
+        let state = Driver.merge(networkingCase, selection)
             .scan(initial) { (state, stateUpdate) -> PostsLogicState in
                 let clear = state.update(keyPath: \.effects, withValue: [])
                 return stateUpdate(clear)
@@ -48,9 +50,10 @@ final class PostsLogic: PostsLogicType {
     private func handle(_ inputs: Driver<PostsLogicInput>) -> Driver<PostsLogicStateUpdate> {
         return inputs.flatMap({ input -> Driver<PostsLogicStateUpdate> in
             switch input {
-            case .moduleReady:
-                let stateUpdate = simpleStateUpdate(keyPath: \PostsLogicState.effects, withValue: [])
+            case .postSelection(let id):
+                let stateUpdate = simpleStateUpdate(keyPath: \PostsLogicState.effects, withValue: [.postDetails(id: id)])
                 return Driver.just(stateUpdate)
+            default: return .empty()
             }
         })
     }

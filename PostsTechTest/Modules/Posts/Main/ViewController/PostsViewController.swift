@@ -60,7 +60,13 @@ class PostsViewController: UIViewController {
     func connectModule() {
         let moduleLoadedInput = Driver.just(PostsDisplayInput.moduleLoaded)
         
-        let outputs = self.viewModel.connect(moduleLoadedInput)
+        let postSelection = tableView.rx
+            .modelSelected(PostDisplayItem.self)
+            .map { PostsDisplayInput.postSelected(id: $0.id) }
+            .asDriver(onErrorDriveWith: .empty())
+        
+        let displayInputs = Driver.merge(moduleLoadedInput, postSelection)
+        let outputs = self.viewModel.connect(displayInputs)
         
         let items = outputs
             .distinctUntilChanged()

@@ -4,6 +4,7 @@ import RxCocoa
 
 enum PostsDisplayInput {
     case moduleLoaded
+    case postSelected(id: Identifier<Post>)
 }
 
 struct PostDisplayItem: Equatable {
@@ -50,6 +51,7 @@ final class PostsViewModel: PostsViewModelType {
     func displayToLogicInput(_ inputs: PostsDisplayInput) -> PostsLogicInput {
         switch inputs {
         case .moduleLoaded: return .moduleReady
+        case .postSelected(let id): return .postSelection(id: id)
         }
     }
     
@@ -68,7 +70,9 @@ final class PostsViewModel: PostsViewModelType {
     func handleEffects(_ effects: [PostsLogicEffects]) {
         effects.forEach { (effect) in
             switch effect {
-            case .none: break
+            case .postDetails(let id):
+                print("selected post \(id)")
+                break
             }
         }
     }
