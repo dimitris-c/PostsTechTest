@@ -13,7 +13,7 @@ class PostsViewController: UIViewController {
         view.rowHeight = UITableView.automaticDimension
         view.separatorInset = .zero
         view.tableFooterView = UIView()
-        view.register(UITableViewCell.self, forCellReuseIdentifier: "postCell.id")
+        view.register(PostTableViewCell.self, forCellReuseIdentifier: PostTableViewCell.identifier)
         return view
     }()
     
@@ -72,12 +72,16 @@ class PostsViewController: UIViewController {
                 }
         }
         
+        outputs.map { $0.item?.navigationTitle ?? "" }
+            .drive(self.rx.title)
+            .disposed(by: disposeBag)
+        
         outputs.map { $0.isLoading }
             .drive(self.activityIndicator.rx.isAnimating)
             .disposed(by: disposeBag)
         
-        items.drive(self.tableView.rx.items(cellIdentifier: "postCell.id")) { row, item, cell in
-            cell.textLabel?.text = item.title
+        items.drive(self.tableView.rx.items(cellIdentifier: PostTableViewCell.identifier, cellType: PostTableViewCell.self)) { row, item, cell in
+            cell.configure(item: item)
         }.disposed(by: disposeBag)
     }
     
