@@ -8,6 +8,10 @@ final class PostsWireframe {
     
     func prepareModule() -> UINavigationController {
         
-        return UINavigationController(rootViewController: UIViewController())
+        let logic = PostsLogic()
+        let viewModel = PostsViewModel(logic: logic)
+        let viewController = PostsViewController(viewModel: viewModel)
+        
+        return UINavigationController(rootViewController: viewController)
     }
 }
