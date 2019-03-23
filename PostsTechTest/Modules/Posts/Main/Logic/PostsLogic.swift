@@ -25,14 +25,18 @@ protocol PostsLogicType {
 
 final class PostsLogic: PostsLogicType {
     
-    init() {
-        
+    private let networkingUseCase: PostsNetworkingUseCase
+    
+    init(networkingUseCase: PostsNetworkingUseCase) {
+        self.networkingUseCase = networkingUseCase
     }
     
     func connect(inputs: Driver<PostsLogicInput>) -> Driver<(context: PostsLogicContext, effects: [PostsLogicEffects])> {
         let initial = PostsLogicState(effects: [], state: .loading)
         
-        let state = self.handle(inputs)
+        let networkingCase = self.networkingUseCase.handle(input: inputs)
+        
+        let state = networkingCase
             .scan(initial) { (state, stateUpdate) -> PostsLogicState in
                 let clear = state.update(keyPath: \.effects, withValue: [])
                 return stateUpdate(clear)

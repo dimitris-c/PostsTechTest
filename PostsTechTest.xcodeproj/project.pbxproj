@@ -30,6 +30,9 @@
 		B7CDF4872246657E002A63DA /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF4862246657E002A63DA /* PostsViewModel.swift */; };
 		B7CDF48A2246670C002A63DA /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF4892246670C002A63DA /* PostsViewController.swift */; };
 		B7CDF48C22466C7A002A63DA /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF48B22466C7A002A63DA /* PostTableViewCell.swift */; };
+		B7CDF48E22466F55002A63DA /* PostsNetworkingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF48D22466F55002A63DA /* PostsNetworkingUseCase.swift */; };
+		B7CDF49022466FC5002A63DA /* PostsNetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */; };
+		B7CDF49322466FE9002A63DA /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CDF49222466FE9002A63DA /* APIConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,9 @@
 		B7CDF4862246657E002A63DA /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		B7CDF4892246670C002A63DA /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		B7CDF48B22466C7A002A63DA /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		B7CDF48D22466F55002A63DA /* PostsNetworkingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkingUseCase.swift; sourceTree = "<group>"; };
+		B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsNetworkingService.swift; sourceTree = "<group>"; };
+		B7CDF49222466FE9002A63DA /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		E52BFF284A7FFFA542D0271F /* Pods-PostsTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE2CF6A8DE20871F05E04CF5 /* Pods-PostsTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PostsTechTestTests/Pods-PostsTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CDF46622465644002A63DA /* Core */,
+				B7CDF49222466FE9002A63DA /* APIConfig.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -303,6 +310,8 @@
 		B7CDF48322466182002A63DA /* Logic */ = {
 			isa = PBXGroup;
 			children = (
+				B7CDF49122466FD1002A63DA /* Services */,
+				B7CDF48D22466F55002A63DA /* PostsNetworkingUseCase.swift */,
 				B7CDF48422466190002A63DA /* PostsLogic.swift */,
 			);
 			path = Logic;
@@ -315,6 +324,14 @@
 				B7CDF48B22466C7A002A63DA /* PostTableViewCell.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B7CDF49122466FD1002A63DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7CDF48F22466FC5002A63DA /* PostsNetworkingService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -539,11 +556,14 @@
 				B7CDF47E22466017002A63DA /* Comment.swift in Sources */,
 				B7CDF46A22465688002A63DA /* Endpoint.swift in Sources */,
 				B7CDF481224660A0002A63DA /* Identifier.swift in Sources */,
+				B7CDF49022466FC5002A63DA /* PostsNetworkingService.swift in Sources */,
+				B7CDF48E22466F55002A63DA /* PostsNetworkingUseCase.swift in Sources */,
 				B7CDF46322465518002A63DA /* GenericDisplay.swift in Sources */,
 				B7CDF48522466190002A63DA /* PostsLogic.swift in Sources */,
 				B7CDF46C224656A7002A63DA /* URLSession+Networking.swift in Sources */,
 				B7CDF47D22466017002A63DA /* User.swift in Sources */,
 				B7CDF48C22466C7A002A63DA /* PostTableViewCell.swift in Sources */,
+				B7CDF49322466FE9002A63DA /* APIConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

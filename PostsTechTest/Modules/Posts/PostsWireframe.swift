@@ -8,7 +8,10 @@ final class PostsWireframe {
     
     func prepareModule() -> UINavigationController {
         
-        let logic = PostsLogic()
+        let apiClient = PostsNetworkingService(networking: NetworkingClient(), baseURL: APIConfig.staging.baseURL!)
+        let networkingCase = PostsNetworkingUseCase(apiClient: apiClient)
+        
+        let logic = PostsLogic(networkingUseCase: networkingCase)
         let viewModel = PostsViewModel(logic: logic)
         let viewController = PostsViewController(viewModel: viewModel)
         
