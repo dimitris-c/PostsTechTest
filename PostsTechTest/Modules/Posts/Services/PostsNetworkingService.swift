@@ -3,7 +3,8 @@ import RxSwift
 
 protocol PostsNetworking {
     func getPosts() -> Observable<[Post]>
-    func getUsers() -> Observable<User>
+    func getUsers() -> Observable<[User]>
+    func getComments(postId: Identifier<Post>) -> Observable<[Comment]>
 }
 
 final class PostsNetworkingService: PostsNetworking {
@@ -22,8 +23,14 @@ final class PostsNetworkingService: PostsNetworking {
             .map { $0.result }
     }
     
-    func getUsers() -> Observable<User> {
-        let endpoint = Endpoint<User>(method: .get, path: "/users/")
+    func getUsers() -> Observable<[User]> {
+        let endpoint = Endpoint<[User]>(method: .get, path: "/users")
+        return self.networking.request(endpoint, baseURL: self.baseURL)
+            .map { $0.result }
+    }
+    
+    func getComments(postId: Identifier<Post>) -> Observable<[Comment]> {
+        let endpoint = Endpoint<[Comment]>(method: .get, path: "/comments", queries: ["postId": postId.value])
         return self.networking.request(endpoint, baseURL: self.baseURL)
             .map { $0.result }
     }
