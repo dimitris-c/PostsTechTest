@@ -30,7 +30,7 @@ final class PostsNetworkingService: PostsNetworking {
     }
     
     func getComments(postId: Identifier<Post>) -> Observable<[Comment]> {
-        let endpoint = Endpoint<[Comment]>(method: .get, path: "/comments", queries: ["postId": postId.value])
+        let endpoint = Endpoint<[Comment]>(method: .get, path: "/comments", queries: ["postId": "\(postId.value)"])
         return self.networking.request(endpoint, baseURL: self.baseURL)
             .map { $0.result }
     }

@@ -12,15 +12,21 @@ final class PostsWireframe {
     
     private var navigationController: UINavigationController?
     
+    private lazy var apiClient: PostsNetworking = {
+      return PostsNetworkingService(networking: NetworkingClient(), baseURL: APIConfig.staging.baseURL!)
+    }()
+    
+    private lazy var postsPeristance: PostsPersistance = {
+        return PostsPersistance(persistance: PersistanceService())
+    }()
+    
     init() {
         
     }
     
     func prepareModule() -> UINavigationController {
         
-        let apiClient = PostsNetworkingService(networking: NetworkingClient(), baseURL: APIConfig.staging.baseURL!)
-        let persistance = PostsPersistance(persistance: PersistanceService())
-        let networkingCase = PostsNetworkingUseCase(apiClient: apiClient, persistance: persistance)
+        let networkingCase = PostsNetworkingUseCase(apiClient: self.apiClient, persistance: self.postsPeristance)
         
         let logic = PostsLogic(networkingUseCase: networkingCase)
         let viewModel = PostsViewModel(logic: logic, navigable: self)
@@ -34,7 +40,7 @@ final class PostsWireframe {
     
     private func showDetail(post: Post) {
         guard let navigationController = self.navigationController else { return }
-        let wireframe = PostDetailsWireframe()
+        let wireframe = PostDetailsWireframe(apiClient: self.apiClient, persistance: self.postsPeristance)
         wireframe.showModule(on: navigationController, post: post)
     }
 }

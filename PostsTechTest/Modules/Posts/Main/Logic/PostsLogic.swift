@@ -39,6 +39,7 @@ final class PostsLogic: PostsLogicType {
         let selection = self.handle(inputs)
         
         let state = Driver.merge(networkingCase, selection)
+            .startWith(simpleStateUpdate(keyPath: \.state, withValue: .loading))
             .scan(initial) { (state, stateUpdate) -> PostsLogicState in
                 let clear = state.update(keyPath: \.effects, withValue: [])
                 return stateUpdate(clear)

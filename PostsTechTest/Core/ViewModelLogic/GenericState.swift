@@ -3,11 +3,17 @@ import Foundation
 public enum DataServiceError: Equatable, Error {
     case networking(_ error: Error)
     
+    public var localizedDescription: String {
+        switch self {
+        case .networking(let error):
+            return error.localizedDescription
+        }
+    }
+    
     public static func ==(lhs: DataServiceError, rhs: DataServiceError) -> Bool {
         switch (lhs, rhs) {
         case (.networking, .networking):
             return true
-        default: return false
         }
     }
 }

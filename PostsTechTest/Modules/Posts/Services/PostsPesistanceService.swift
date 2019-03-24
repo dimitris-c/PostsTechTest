@@ -53,7 +53,7 @@ struct PostsPersistance: PostsPersistanceType {
     // MARK: - Comments
     
     func getComments(postId: Identifier<Post>) -> [Comment]? {
-        guard let data = self.persistance.encode(object: self.commentKey(for: postId)) else {
+        guard let data = self.persistance.get(key: self.commentKey(for: postId)) else {
             return nil
         }
         return self.persistance.decode([Comment].self, data: data)
@@ -67,6 +67,6 @@ struct PostsPersistance: PostsPersistanceType {
     }
     
     private func commentKey(for postId: Identifier<Post>) -> String {
-        return "\(postId.value)-comments"
+        return "postId-\(postId.value)-comments"
     }
 }
