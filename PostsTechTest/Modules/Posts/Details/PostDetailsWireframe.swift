@@ -6,9 +6,9 @@ final class PostDetailsWireframe {
         
     }
     
-    func showModule(on viewController: UINavigationController, postId: Identifier<Post>) {
+    func showModule(on viewController: UINavigationController, post: Post) {
         
-        let logic = PostDetailsLogic(postId: postId)
+        let logic = PostDetailsLogic(post: post)
         let viewModel = PostDetailsViewModel(logic: logic)
         let postDetailViewController = PostDetailsViewController(viewModel: viewModel)
         

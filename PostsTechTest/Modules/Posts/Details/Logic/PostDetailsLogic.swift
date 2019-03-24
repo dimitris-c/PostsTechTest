@@ -30,10 +30,10 @@ protocol PostDetailsLogicType {
 }
 
 final class PostDetailsLogic: PostDetailsLogicType {
-    private let postId: Identifier<Post>
+    private let post: Post
     
-    init(postId: Identifier<Post>) {
-        self.postId = postId
+    init(post: Post) {
+        self.post = post
     }
     
     func connect(inputs: Driver<PostDetailsLogicInput>) -> Driver<PostDetailsOutput> {

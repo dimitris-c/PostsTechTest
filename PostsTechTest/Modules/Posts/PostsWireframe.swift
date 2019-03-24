@@ -1,7 +1,7 @@
 import UIKit
 
 enum PostsFlowRoute {
-    case postDetails(postId: Identifier<Post>)
+    case postDetails(post: Post)
 }
 
 protocol PostsFlowNavigable: class {
@@ -32,18 +32,18 @@ final class PostsWireframe {
         return navigationController
     }
     
-    private func showDetail(postId: Identifier<Post>) {
+    private func showDetail(post: Post) {
         guard let navigationController = self.navigationController else { return }
         let wireframe = PostDetailsWireframe()
-        wireframe.showModule(on: navigationController, postId: postId)
+        wireframe.showModule(on: navigationController, post: post)
     }
 }
 
 extension PostsWireframe: PostsFlowNavigable {
     func handle(_ route: PostsFlowRoute) {
         switch route {
-        case .postDetails(let id):
-            self.showDetail(postId: id)
+        case .postDetails(let post):
+            self.showDetail(post: post)
             return
         }
     }

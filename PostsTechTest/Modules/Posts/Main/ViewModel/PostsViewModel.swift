@@ -72,8 +72,8 @@ final class PostsViewModel: PostsViewModelType {
     func handleEffects(_ effects: [PostsLogicEffects]) {
         effects.forEach { (effect) in
             switch effect {
-            case .postDetails(let id):
-                self.navigable.handle(PostsFlowRoute.postDetails(postId: id))
+            case .postDetails(let post):
+                self.navigable.handle(PostsFlowRoute.postDetails(post: post))
                 break
             }
         }

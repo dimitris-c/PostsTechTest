@@ -8,7 +8,7 @@ enum PostsLogicInput {
 }
 
 enum PostsLogicEffects {
-    case postDetails(id: Identifier<Post>)
+    case postDetails(post: Post)
 }
 
 struct PostsLogicState: LogicStateType {
@@ -51,7 +51,12 @@ final class PostsLogic: PostsLogicType {
         return inputs.flatMap({ input -> Driver<PostsLogicStateUpdate> in
             switch input {
             case .postSelection(let id):
-                let stateUpdate = simpleStateUpdate(keyPath: \PostsLogicState.effects, withValue: [.postDetails(id: id)])
+                let stateUpdate: PostsLogicStateUpdate = { state in
+                    guard let post = state.state.item?.first(where: { $0.id == id }) else {
+                        return state
+                    }
+                    return state.update(keyPath: \.effects, withValue: [.postDetails(post: post)])
+                }
                 return Driver.just(stateUpdate)
             default: return .empty()
             }
