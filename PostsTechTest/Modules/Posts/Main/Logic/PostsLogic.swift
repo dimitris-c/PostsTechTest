@@ -7,7 +7,7 @@ enum PostsLogicInput {
     case postSelection(id: Identifier<Post>)
 }
 
-enum PostsLogicEffects {
+enum PostsLogicEffects: Equatable {
     case postDetails(post: Post)
 }
 

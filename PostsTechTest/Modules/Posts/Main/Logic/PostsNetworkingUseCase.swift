@@ -5,9 +5,9 @@ import RxCocoa
 struct PostsNetworkingUseCase {
     
     private let apiClient: PostsNetworking
-    private let persistance: PostsPersistance
+    private let persistance: PostsPersistanceType
     
-    init(apiClient: PostsNetworking, persistance: PostsPersistance) {
+    init(apiClient: PostsNetworking, persistance: PostsPersistanceType) {
         self.apiClient = apiClient
         self.persistance = persistance
     }
