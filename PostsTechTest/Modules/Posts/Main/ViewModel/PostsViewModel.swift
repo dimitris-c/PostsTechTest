@@ -78,9 +78,5 @@ final class PostsViewModel: PostsViewModelType {
             }
         }
     }
-    
-    deinit {
-        print("ASDFADSFADS")
-    }
 }
 
