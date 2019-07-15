@@ -2,7 +2,7 @@ A sample implementation for tech tests, thanks for considering me for this role.
 
 
 ### Instalation
-For the simplicity of the tech project I've added the 3rd libraries (via CocoaPods) in the repo so you'd just open the workspace and run the project.
+For the simplicity of the tech project I've added the 3rd party libraries (via CocoaPods) in the repo so you'd just open the workspace and run the project.
 
 ### Libraries Used
 * RxSwift
