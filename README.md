@@ -1,5 +1,4 @@
-## Hey Babylon Team
-This is my implementation for your tech test, thanks for considering me for this role.
+A sample implementation for tech tests, thanks for considering me for this role.
 
 
 ### Instalation
