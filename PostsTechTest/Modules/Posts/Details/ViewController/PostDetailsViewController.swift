@@ -131,7 +131,7 @@ class PostDetailsViewController: UIViewController {
                 case .display(let displayItem):
                     return .just(displayItem.item)
                 case .error(error: let error):
-                    self?.showError(title: "Something went wrong", message: error.localizedDescription)
+                    self?.showError(error: error, okAction: nil)
                     return .empty()
                 default: return .empty()
                 }
@@ -149,12 +149,6 @@ class PostDetailsViewController: UIViewController {
         displayItem.map { $0.body }.drive(self.bodyLabel.rx.text).disposed(by: disposeBag)
         displayItem.map { $0.author }.drive(self.userLabel.rx.text).disposed(by: disposeBag)
         displayItem.map { $0.totalCommentsTitle }.drive(self.commentsLabel.rx.text).disposed(by: disposeBag)
-    }
-    
-    private func showError(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(.init(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
 
 }

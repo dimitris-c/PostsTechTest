@@ -18,8 +18,8 @@ struct PostsNetworkingUseCase {
             case .moduleReady:
                 let fetchedPosts = self.persistance.getPosts() ?? []
                 return self.apiClient.getPosts()
-                    .startWith(fetchedPosts)
                     .do(onNext: self.persistance.savePosts)
+                    .startWith(fetchedPosts)
                     .map(self.stateUpdate)
                     .asDriver(onErrorRecover: self.recoverFromError)
             default: return .empty()

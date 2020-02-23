@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0D5CD32A01690804F45F1D49 /* Pods_PostsTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C8A2BEA820FEDFF76285DAB /* Pods_PostsTechTest.framework */; };
 		AE3C7F70A28C2F71C2333AD5 /* Pods_PostsTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425A259D080BC9A3A35ED6AE /* Pods_PostsTechTestTests.framework */; };
+		B503F5DA2402FE8D0022035C /* UIViewController+ErrorDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503F5D92402FE8D0022035C /* UIViewController+ErrorDisplay.swift */; };
 		B76E58672247C1C40018C691 /* PostsLogicSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E58662247C1C40018C691 /* PostsLogicSpecs.swift */; };
 		B76E586B2247C30A0018C691 /* MockPostsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E586A2247C30A0018C691 /* MockPostsNetworking.swift */; };
 		B76E586D2247C3CF0018C691 /* MockPostsPersistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76E586C2247C3CF0018C691 /* MockPostsPersistance.swift */; };
@@ -60,6 +61,7 @@
 		425A259D080BC9A3A35ED6AE /* Pods_PostsTechTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsTechTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8A2BEA820FEDFF76285DAB /* Pods_PostsTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PostsTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F8FCE046F4F29C4401A8773 /* Pods-PostsTechTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTechTest.release.xcconfig"; path = "Target Support Files/Pods-PostsTechTest/Pods-PostsTechTest.release.xcconfig"; sourceTree = "<group>"; };
+		B503F5D92402FE8D0022035C /* UIViewController+ErrorDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorDisplay.swift"; sourceTree = "<group>"; };
 		B76E58662247C1C40018C691 /* PostsLogicSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsLogicSpecs.swift; sourceTree = "<group>"; };
 		B76E586A2247C30A0018C691 /* MockPostsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsNetworking.swift; sourceTree = "<group>"; };
 		B76E586C2247C3CF0018C691 /* MockPostsPersistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostsPersistance.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				B7CDF46E224656E6002A63DA /* Encodable+JSON.swift */,
+				B503F5D92402FE8D0022035C /* UIViewController+ErrorDisplay.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				B7CDF49722467920002A63DA /* Persistance.swift in Sources */,
 				B7CDF4872246657E002A63DA /* PostsViewModel.swift in Sources */,
 				B7CDF47F22466017002A63DA /* Post.swift in Sources */,
+				B503F5DA2402FE8D0022035C /* UIViewController+ErrorDisplay.swift in Sources */,
 				B7CDF49C22467F28002A63DA /* PostsPesistanceService.swift in Sources */,
 				B7FFD26F224699FE00730E23 /* PostDetailViewModel.swift in Sources */,
 				B7CDF46822465651002A63DA /* Networking.swift in Sources */,

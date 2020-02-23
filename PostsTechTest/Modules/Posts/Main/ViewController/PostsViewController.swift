@@ -70,6 +70,10 @@ class PostsViewController: UIViewController {
         
         let items = outputs
             .distinctUntilChanged()
+            .do(onNext: { [weak self] (display) in
+                guard let error = display.error else { return }
+                self?.showError(error: error, okAction: nil)
+            })
             .map { (display) -> [PostDisplayItem] in
                 switch display {
                 case .display(let items):

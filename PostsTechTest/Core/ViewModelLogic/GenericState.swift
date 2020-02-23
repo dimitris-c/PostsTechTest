@@ -1,6 +1,6 @@
 import Foundation
 
-public enum DataServiceError: Equatable, Error {
+public enum DataServiceError: Equatable, LocalizedError {
     case networking(_ error: Error)
     
     public var localizedDescription: String {
@@ -8,6 +8,10 @@ public enum DataServiceError: Equatable, Error {
         case .networking(let error):
             return error.localizedDescription
         }
+    }
+    
+    public var errorDescription: String? {
+        return localizedDescription
     }
     
     public static func ==(lhs: DataServiceError, rhs: DataServiceError) -> Bool {
