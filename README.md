@@ -17,7 +17,3 @@ For the architecture I used MVVM paired with Wireframes, a bit like Coordinator/
 For the the persistance layer I went with plain disk storage that saves JSON to text files.
 
 Regarding Unit Tests, I've added only added a couple due to time constraints
-
-Again thanks for the opportunity and I do hope we have a chat over at your offices to discuss my approach and hear your feedback.
-
-Dimitris
